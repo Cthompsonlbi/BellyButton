@@ -1,0 +1,7 @@
+.jumbotron {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    background-image:url("veggie3.JPG");
+    background-size: 100% 100%;
+    text-align: center;
+}

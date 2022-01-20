@@ -115,7 +115,7 @@ function buildCharts(sample) {
     var barLayout = {
       title: `Top 10 Bacteria Cultures Found In Sample ${sample}`,
       showlegend: false,
-
+      yaxis: { autorange: 'reversed'}
 
     };
 
