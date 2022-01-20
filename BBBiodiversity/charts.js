@@ -27,7 +27,7 @@ function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildMetadata(newSample);
   buildCharts(newSample);
-  
+
 }
 
 // Demographics Panel 
@@ -48,6 +48,7 @@ function buildMetadata(sample) {
     // tags for each key-value in the metadata.
     Object.entries(result).forEach(([key, value]) => {
       PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
+      console.log(metadata);
     });
 
   });
@@ -57,15 +58,28 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
- 
+    console.log(data);
     // 3. Create a variable that holds the samples array. 
     var chart = data.samples;
     // 4. Create a variable that filters the samples for the object with the desired sample number.
- 
+
     var chartSelect = chart.filter(sampleObj => sampleObj.id == sample);
+
+    // 1. Create a variable that filters the metadata array for the object with the desired sample number.
+    let metadata = data.metadata;
+
+    //Deliverable3 Gauge Del. filters metadata to return the selected ID
+    let metaResult = metadata.filter(sampleObj => sampleObj.id == sample);
+
+
+
     //  5. Create a variable that holds the first sample in the array.
     var chartResult = chartSelect[0];
     console.log(chartResult);
+
+    //2. Deliverable 3 Gauge Chart Del. Create a variable that holds the first sample in the metadata array
+
+    let metadataResult = metaResult[0];
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     let otu_ids = chartResult.otu_ids;
@@ -73,14 +87,16 @@ function buildCharts(sample) {
     let otu_labels = chartResult.otu_labels;
     console.log(otu_labels);
     let sample_values = chartResult.sample_values;
-    console.log(sample_values);  
-  
+    console.log(sample_values);
+
+    //Gauge Chart Createing a variable
+    let wfreq = parseFloat(metadataResult.wfreq);
 
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
 
-    var yticks = otu_ids.slice(0,10).map(otuID =>`OTU ${otuID}`).reverse()
+    var yticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse()
     console.log(yticks);
 
     // 8. Create the trace for the bar chart. 
@@ -109,31 +125,67 @@ function buildCharts(sample) {
     // 1. Create the trace for the bubble chart.
     //start of bubble chart
     var bubbleData = [
-     {
-       x: otu_ids,
-       y: sample_values,
-       text: otu_labels,
-       mode: 'markers',
-       marker: {
-        size: sample_values,
-        color: otu_ids,
-        colorscale: "Jet",
-       }
+      {
+        x: otu_ids,
+        y: sample_values,
+        text: otu_labels,
+        mode: 'markers',
+        marker: {
+          size: sample_values,
+          color: otu_ids,
+          colorscale: "Jet",
+        }
 
-     }
+      }
     ];
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: ` Bacteria Culture Per Sample ${sample}`,
       showlegend: false,
-      xaxis: {title: "OTU ID"},
-      yaxis: {title: "Bacteria Count"},
-      
+      xaxis: { title: "OTU ID" },
+      yaxis: { title: "Bacteria Count" },
+
     };
-    
-        // 3. Use Plotly to plot the data with the layout.
-        Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
+
+    // Create the yticks for the bar chart.
+    // 3. Use Plotly to plot the data with the layout.
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+
+    //4. Create the trace for the gauge chart.
+    var gaugeData = [
+      {
+        type: "indicator",
+        mode: "gauge+number",
+        value: wfreq,
+        title: { text: "<b>Belly Button Wash Frequency</b> <br> Scrubs per Week", font: { size: 24 } },
+        gauge: {
+          axis: { range: [null, 10], tickwidth: 1, tickcolor: "black" },
+          bar: { color: "black" },
+          bgcolor: "white",
+          borderwidth: 2,
+          bordercolor: "gray",
+          steps: [
+            { range: [0, 2], color: "red" },
+            { range: [2, 4], color: "orange" },
+            { range: [4, 6], color: "yellow" },
+            { range: [6, 8], color: "yellowgreen" },
+            { range: [8, 10], color: "green" },
+          ],
+
+        }
+      }
+    ];
+
+    //5. Create the layout for the gauge chart.
+    var gaugeLayout = {
+      margin: { t: 25, r: 25, l: 25, b: 25 },
+      paper_bgcolor: "white",
+      font: { color: "black", family: "Arial" },
+    };
+
+    //6. Use Plotly to plot the gauge data and layout.
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
   });
   //samples.json no longer available
 }
