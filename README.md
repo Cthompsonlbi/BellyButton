@@ -57,18 +57,18 @@ Code has been created in the buildCharts() function to handle the layout object 
 
 ### Delivery 3
 
-Delivery 3 was a bit more challenging as much of what was done for deliverables one and two could not be reused for this deliverable.  The data required to create this plot had to be accessed through the metadata and not the samples array as had been done for the two previous deliverables.  A metadata variable had to be created to store the data from the metadata.  Then a filter object had to be utilized to filter upon the data that was selected from the drop downmenu. 
+Delivery 3 was a bit more challenging as much of what was done for deliverables one and two could not be reused for this deliverable.  The data required to create this plot had to be accessed through the metadata and not the samples array as had been done for the two previous deliverables.  A metadata variable had to be created, as seen in the image below, to store the data from the metadata.  Then a filter object had to be utilized to filter upon the data that was selected from the webpage drop downmenu. 
 
 ![meta4gauge](./BBBiodiversity/images/meta4gauge.png)
 
-To create the gauge chart we needed to access the wash frequency of the subjects and plot that data.  Once I created the code to obtain the wash frequency of the selected subject, I did the following to create the gauge chart:
+To create the gauge chart, I needed to access the wash frequency of the test subjects and plot that data.  Once I created the code to obtain the wash frequency of the selected subject, I did the following to create the gauge chart:
 
   * Created a title bar using title:{text:}
   * Pulled in the wash frequency values as wfreq
   * Assinged the gauge data type as "indicator"
   * Assigned the mode as "gauge+number"
   * Layed out the gauge to color coded intervals
-  * Used both a numeric value and gauge length to indicate frequency
+  * Display both a numeric value and gauge length to indicate frequency
   * Set the gauge margins and positions within the HTML document
   * set the plot and paper background to a light gray color
 
@@ -76,7 +76,7 @@ To create the gauge chart we needed to access the wash frequency of the subjects
 
 ![CSS](./BBBiodiversity/images/CSS.png)
 
-As you can see from the code snippet above, I used the css style sheet for some of the customizations of the webpage listed below:
+As can be seen from the code snippet above, I used the css style sheet for some of the customizations of the webpage listed below:
 
 * Used CSS to add an image through my Style.CSS file
 * Changed Font Color in Jumbotron using CSS Style.CSS file
