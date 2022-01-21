@@ -76,4 +76,4 @@ Delivery 3 was a bit more challenging as much of what was done for deliverables 
 * Used CSS styling to darken the NavBar slightly to help guide the users eyes
 * Added Paragraph Tag Below Jumbotron to provide use instructions to the user
 
-![DimTickers](resources/DimTickers.PNG)
+![generalScreen](./BBBdiversity/images/generalScreen.PNG)
