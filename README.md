@@ -67,6 +67,8 @@ Delivery 3 was a bit more challenging as much of what was done for deliverables 
 
 ### Delivery 4
 
+![CSS](./BBBiodiversity/images/CSS.PNG)
+
 * Used CSS to add an image through my Style.CSS file
 * Changed Font Color in Jumbotron using CSS Style.CSS file
 * Provide code for shading is Style.CSS for better visibility of text overlayed on an image
