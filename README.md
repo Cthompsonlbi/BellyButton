@@ -75,3 +75,5 @@ Delivery 3 was a bit more challenging as much of what was done for deliverables 
 * Added NavBar through HTML that provides a quicklink back to my Github page
 * Used CSS styling to darken the NavBar slightly to help guide the users eyes
 * Added Paragraph Tag Below Jumbotron to provide use instructions to the user
+
+![DimTickers](resources/DimTickers.PNG)
