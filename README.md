@@ -14,22 +14,23 @@ The purpose of this exercise is to help reinforce lessons learned through Module
 ### Delivery 1
 
 Code is created to handle arrays when a sample is selected from a dropdown menu.
-A function buildCharts() is created through code to create a trace object that will contain the following information to be used for plot creation through Plotly:
+A buildCharts() function is created through code to create a trace object that will contain the following information to be used for plot creation through Plotly:
 
-  * The y values are the otu_ids in descending order
-  * The x values are the sample_values in descending order
-  * The hover text is the otu_labels in descending order.
+  * The y values are assigned the otu_ids and displayed in descending order
+  * The x values are assigned the sample_values
+  * The hover text is set to display the otu_labels
   * Assign the chart type as "bar"
   * Assign the bar chart as a "h" for horizontal
 
 Once completed, I created code to handle the layout array in the buildCharts() function.  This layout array will do the following:
-   * Creates a title for the chart
-   * Hides the legend
+   * Create a title for the chart
+   * Hide the legend
    * Reverse the chart to display large samples at the top and descends to the bottom for the smaller samples
    * Changed the plot background color to a light grey
    * Changed the paper background color to a light grey
   
 When the dashboard is first opened in a browser, ID 940’s data is preloaded in the dashboard, and the bar chart has the following:
+
   * The top 10 sample_values are sorted in descending order
   * The top 10 sample_values as values
   * The otu_ids as the labels
@@ -38,18 +39,20 @@ When the dashboard is first opened in a browser, ID 940’s data is preloaded in
 
 For this deliverable, I leveraged a large portion of the code created for the first deliverable to create the bubble chart on this dashboard.
 The code created in the buildCharts() function to handle the trace object information of the bubble chart are as follows:
+
   * Set the otu_ids as the x-axis
   * Set the sample_values as the y-axis
   * Set the otu_labels as the hover-text values
   * Set the sample_values as the marker size
   * Set the otu_ids as the marker colors in the bubble chart.
-  * Colorscale was set to "JET"
+  * Set colorscale to "JET"
 
 Code has been created in the buildCharts() function to handle the layout object of the bubble chart. The following has been added to the layout variable:
+
   * Code to create a title
   * Code created to label the x-axis
   * Code created to label the y-axis
-  * Text appears when hovering over the bubble.
+  * Text appears when hovering over a bubble.
   * plot background color and paper background color set to light gray.
 
 ### Delivery 3
