@@ -9,7 +9,7 @@ Assist Roza with the partially completed dashboard by adding visualizations to c
 
 ### Purpose
 
-The purpose of this exercise is to help reinforce lessons learned through Module 12 and earlier with Javascript, HTML, CSS, Plotly and Bootstrap and apply them be creating and then refining a dashboard.
+The purpose of this exercise is to help reinforce lessons learned through Module 12 and earlier with Javascript, HTML, CSS, Plotly and Bootstrap and apply them by creating and then refining a dashboard.
 
 ### Delivery 1
 
