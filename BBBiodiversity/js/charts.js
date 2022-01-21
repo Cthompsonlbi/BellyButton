@@ -151,7 +151,6 @@ function buildCharts(sample) {
       showlegend: false,
       xaxis: { title: "<b>OTU ID</b>" },
       yaxis: { title: "<b>Bacteria Count</b>" },
-      paper_bgcolor: "lightgray",
       plot_bgcolor: "rgb(233, 233, 233)",
       paper_bgcolor: "rgb(233, 233, 233)"
     };
@@ -188,7 +187,6 @@ function buildCharts(sample) {
     //5. Create the layout for the gauge chart.
     var gaugeLayout = {
       margin: { t: 25, r: 25, l: 25, b: 25 },
-      paper_bgcolor: "white",
       font: { color: "black", family: "Arial" },
       plot_bgcolor: "rgb(233, 233, 233)",
       paper_bgcolor: "rgb(233, 233, 233)"
