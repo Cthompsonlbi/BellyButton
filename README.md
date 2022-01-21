@@ -54,7 +54,11 @@ Code has been created in the buildCharts() function to handle the layout object 
 
 ### Delivery 3
 
-Delivery 3 was a bit more challenging as much of what was done for deliverables one and two could not be reused for this deliverable.  The data required to create this plot had to be accessed through the metadata and not the samples array as had been done for the two previous deliverables.  A metadata variable had to be created to store the data from the metadata.  Then a filter object had to be utilized to filter upon the data that was selected from the drop down menu. To create the gauge chart we needed to access the wash frequency of the subjects and plot that data.  Once I created the code to obtaing the wash frequency of the selected subject, I did the following to create the gauge chart:
+Delivery 3 was a bit more challenging as much of what was done for deliverables one and two could not be reused for this deliverable.  The data required to create this plot had to be accessed through the metadata and not the samples array as had been done for the two previous deliverables.  A metadata variable had to be created to store the data from the metadata.  Then a filter object had to be utilized to filter upon the data that was selected from the drop down menu. 
+
+![meta4gauge](./BBBiodiversity/images/meta4gauge.png)
+
+To create the gauge chart we needed to access the wash frequency of the subjects and plot that data.  Once I created the code to obtaing the wash frequency of the selected subject, I did the following to create the gauge chart:
 
   * Created a title bar using title:{text:}
   * Pulled in the wash frequency values as wfreq
