@@ -67,7 +67,9 @@ Delivery 3 was a bit more challenging as much of what was done for deliverables 
 
 ### Delivery 4
 
-![CSS](./BBBiodiversity/images/CSS.PNG)
+![CSS](./BBBiodiversity/images/CSS.png)
+
+As you can see from the code snippet above I used the css style sheet for some of the customizations of the webpage listed below:
 
 * Used CSS to add an image through my Style.CSS file
 * Changed Font Color in Jumbotron using CSS Style.CSS file
