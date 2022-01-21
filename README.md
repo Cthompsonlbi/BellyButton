@@ -5,7 +5,7 @@ Mod12
 
 ## Overview
 
-Assist Roza with the partically completed dashboard by adding visualizations to compliment her demographic panel.  The visualizations will expand upon the demographic panel by providing visuals to highlight the type of bacteria found, how much bacteria is found and the wash frequency of each individual represented in the applicable data set.  The end goal is to find individuals with a particular species of bacteria that will assist in the production of synthetic beef.
+Assist Roza with the partially completed dashboard by adding visualizations to compliment her demographic panel.  The visualizations will expand upon the demographic panel by providing visuals to highlight the type of bacteria found, how much bacteria is found and the wash frequency of each individual represented in the applicable data set.  The end goal is to find individuals with a particular species of bacteria that will assist in the production of synthetic beef.
 
 ### Purpose
 
@@ -22,7 +22,7 @@ A function buildCharts() is created through code to create a trace object that w
   * Assign the chart type as "bar"
   * Assign the bar chart as a "h" for horizontal
 
-The onoce completed I created code to handle the layout array in the buildCharts() function.  This layout array will do the following:
+Once completed, I created code to handle the layout array in the buildCharts() function.  This layout array will do the following:
    * Creates a title for the chart
    * Hides the legend
    * Reverse the chart to display large samples at the top and descends to the bottom for the smaller samples
@@ -45,7 +45,7 @@ The code created in the buildCharts() function to handle the trace object inform
   * Set the otu_ids as the marker colors in the bubble chart.
   * Colorscale was set to "JET"
 
-Code has been created in the buildCharts() function to handle the layout object of the bubble chart.The following has been added to the layout variable:
+Code has been created in the buildCharts() function to handle the layout object of the bubble chart. The following has been added to the layout variable:
   * Code to create a title
   * Code created to label the x-axis
   * Code created to label the y-axis
@@ -54,11 +54,11 @@ Code has been created in the buildCharts() function to handle the layout object 
 
 ### Delivery 3
 
-Delivery 3 was a bit more challenging as much of what was done for deliverables one and two could not be reused for this deliverable.  The data required to create this plot had to be accessed through the metadata and not the samples array as had been done for the two previous deliverables.  A metadata variable had to be created to store the data from the metadata.  Then a filter object had to be utilized to filter upon the data that was selected from the drop down menu. 
+Delivery 3 was a bit more challenging as much of what was done for deliverables one and two could not be reused for this deliverable.  The data required to create this plot had to be accessed through the metadata and not the samples array as had been done for the two previous deliverables.  A metadata variable had to be created to store the data from the metadata.  Then a filter object had to be utilized to filter upon the data that was selected from the drop downmenu. 
 
 ![meta4gauge](./BBBiodiversity/images/meta4gauge.png)
 
-To create the gauge chart we needed to access the wash frequency of the subjects and plot that data.  Once I created the code to obtaing the wash frequency of the selected subject, I did the following to create the gauge chart:
+To create the gauge chart we needed to access the wash frequency of the subjects and plot that data.  Once I created the code to obtain the wash frequency of the selected subject, I did the following to create the gauge chart:
 
   * Created a title bar using title:{text:}
   * Pulled in the wash frequency values as wfreq
@@ -73,7 +73,7 @@ To create the gauge chart we needed to access the wash frequency of the subjects
 
 ![CSS](./BBBiodiversity/images/CSS.png)
 
-As you can see from the code snippet above I used the css style sheet for some of the customizations of the webpage listed below:
+As you can see from the code snippet above, I used the css style sheet for some of the customizations of the webpage listed below:
 
 * Used CSS to add an image through my Style.CSS file
 * Changed Font Color in Jumbotron using CSS Style.CSS file
@@ -81,7 +81,7 @@ As you can see from the code snippet above I used the css style sheet for some o
 * Used HTML tags in the Index file and Charts.JS file to Bold the Titles
 * Change the background color of Index.html and Charts.JS to grey to reduce eyestrain from the previously white background page
 * Added NavBar through HTML that provides a quicklink back to my Github page
-* Used CSS styling to darken the NavBar slightly to help guide the users eyes
+* Used CSS styling to darken the NavBar slightly to help guide the user's eyes
 * Added Paragraph Tag Below Jumbotron to provide use instructions to the user
 
 ![generalScreen](./BBBiodiversity/images/generalScreen.PNG)
