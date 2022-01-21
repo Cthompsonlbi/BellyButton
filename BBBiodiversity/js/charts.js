@@ -107,16 +107,22 @@ function buildCharts(sample) {
         text: otu_labels,
         type: "bar",
         orientation: "h",
+        
 
-      }
+      },
+     
+      
     ];
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: `Top 10 Bacteria Cultures Found In Sample ${sample}`,
+      title: `<b>Top 10 Bacteria Cultures Found In Sample ${sample}:</b>`,
       showlegend: false,
-      yaxis: { autorange: 'reversed'}
-
+      yaxis: { autorange: 'reversed'},
+      plot_bgcolor: "rgb(233, 233, 233)",
+      paper_bgcolor: "rgb(233, 233, 233)",
+    
+    
     };
 
     // 10. Use Plotly to plot the data with the layout. 
@@ -141,11 +147,13 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: ` Bacteria Culture Per Sample ${sample}`,
+      title: `<b> Bacteria Culture Per Sample ${sample}:</b>`,
       showlegend: false,
-      xaxis: { title: "OTU ID" },
-      yaxis: { title: "Bacteria Count" },
-
+      xaxis: { title: "<b>OTU ID</b>" },
+      yaxis: { title: "<b>Bacteria Count</b>" },
+      paper_bgcolor: "lightgray",
+      plot_bgcolor: "rgb(233, 233, 233)",
+      paper_bgcolor: "rgb(233, 233, 233)"
     };
 
     // Create the yticks for the bar chart.
@@ -158,7 +166,7 @@ function buildCharts(sample) {
         type: "indicator",
         mode: "gauge+number",
         value: wfreq,
-        title: { text: "<b>Belly Button Wash Frequency</b> <br> Scrubs per Week", font: { size: 24 } },
+        title: { text: "<b>Belly Button Wash Frequency:</b> <br> Scrubs per Week", font: { size: 24 } },
         gauge: {
           axis: { range: [null, 10], tickwidth: 1, tickcolor: "black" },
           bar: { color: "black" },
@@ -182,6 +190,8 @@ function buildCharts(sample) {
       margin: { t: 25, r: 25, l: 25, b: 25 },
       paper_bgcolor: "white",
       font: { color: "black", family: "Arial" },
+      plot_bgcolor: "rgb(233, 233, 233)",
+      paper_bgcolor: "rgb(233, 233, 233)"
     };
 
     //6. Use Plotly to plot the gauge data and layout.
