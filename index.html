@@ -12,19 +12,23 @@
 
 
 <body>
-
+  <div class="wrapper">
+    <nav class="navbar navbar-light navbar-expand-lg">
+       <a class="navbar-brand" href="https://github.com/Cthompsonlbi/BellyButton"><u>Back To Github Repository</u></a>
+    </nav>
+</div>
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
+      <font face = "new times roman"<p><b><u><h4>To view bacteria cultures found in test subject's belly button, please select a from the drop down menu below:</p></b></u></h4></font>
     </div>
     <div class="row">
       <div class="col-md-2">
         <div class="well">
           <h5><b>Test Subject ID No.:</b></h5>
-          <p><h6>Please Select From Drop Down Menu</h6></p>
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
@@ -58,3 +62,7 @@
 <!--Changed Font Color in Jumbo-->
 <!--Provide code for shading is Style.CSS for better visibility of text overlayed on image-->
 <!--Bold Titles-->
+<!--change the background color of HTML and Plots to grey to reduce eyestrain from the previously white background page-->
+<!--Added NavBar through HTML that provides a quicklink back to my Github page-->
+<!--Used CSS styling to darken the NavBar slightly to help guide the users eyes-->
+<!--Added Paragraph Tag Below Jumbotron to provide instructions to user-->
